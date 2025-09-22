@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D'Barber Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+</head>
+
+<body class="bg-neutral-900 text-gray-200 font-sans overflow-x-hidden">
+
+    <!-- Top Header -->
+
+    <div id="topheader"></div>
+    <script src="assets/js/topheader.js"></script>
+
+    <!-- Área personalizável -->
+
+    <!-- Header -->
+    <header class="relative h-[60vh] bg-cover bg-center" style="background-image: url('assets/img/header.jpg');">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white">
+            <h1 class="text-4xl font-bold">Bem-vindo à D'Barber Shop</h1>
+            <p class="text-lg mt-3">Estilo, cuidado e tradição para o seu visual</p>
+        </div>
+    </header>
+
+    <!-- Informações -->
+    <section class="flex flex-col sm:flex-row justify-around gap-4 p-6">
+        <div class="bg-neutral-800 p-5 rounded-lg text-center flex-1">Cortes a partir de <strong>R$ 17</strong></div>
+        <div class="bg-neutral-800 p-5 rounded-lg text-center flex-1">Atendimento com hora marcada</div>
+        <div class="bg-neutral-800 p-5 rounded-lg text-center flex-1">Ambiente climatizado</div>
+    </section>
+
+    <!-- CTA -->
+    <section class="text-center p-10 bg-neutral-700">
+        <h2 class="text-2xl font-semibold">Agende seu horário agora!</h2>
+        <a href="agendamento.html"
+            class="inline-block mt-5 px-6 py-3 bg-amber-500 text-black rounded-full font-bold hover:bg-yellow-600">Agendar</a>
+    </section>
+
+    <!-- Contatos -->
+    <section class="p-8 text-center">
+        <h3 class="text-xl font-bold mb-4">Entre em Contato</h3>
+
+        <!-- Área personalizável -->
+        <p>Endereço: Avenida Embaixador Milton Cabral, Tibiri - Santa Rita/PB</p>
+        <p>Telefone: <a href="tel:+5583988660079" class="text-amber-400 hover:underline">(83) 98866-0079</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/daniel_andersonss/" target="_blank"
+                class="text-amber-400 hover:underline">@daniel_andersonss</a></p>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script src="assets/js/footer.js"></script>
+
+</body>
+
+</html>

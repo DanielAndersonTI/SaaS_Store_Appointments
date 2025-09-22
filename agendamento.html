@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento | D'Barber Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+</head>
+
+<body class="bg-neutral-900 text-gray-200 font-sans overflow-x-hidden">
+
+  <!-- Top Header -->
+  <div id="topheader"></div>
+  <script src="assets/js/topheader.js"></script>
+
+  <!-- Formulário de Agendamento -->
+  <main class="max-w-xl mx-auto mt-10 p-6 bg-neutral-800 rounded-lg shadow-md">
+    <h2 class="text-2xl font-bold mb-6 text-center">Agende seu horário</h2>
+    <form action="agendar.php" method="POST" class="space-y-6">
+
+      <!-- Nome -->
+      <div>
+        <label for="nome" class="block mb-2 font-semibold">Nome completo</label>
+        <input type="text" id="nome" name="nome" required
+          class="w-full px-4 py-2 rounded-lg border-4 border-neutral-900 bg-neutral-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-amber-500">
+      </div>
+
+      <!-- Telefone -->
+      <div>
+        <label for="telefone" class="block mb-2 font-semibold">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" required
+          class="w-full px-4 py-2 rounded-lg border-4 border-neutral-900 bg-neutral-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-amber-500">
+      </div>
+
+      <!-- Data e Hora -->
+      <div class="flex items-center gap-2">
+        <div class="flex-shrink-0">
+          <img src="assets/icons/calendar.png" alt="Calendário" class="w-10 h-10 cursor-pointer">
+        </div>
+        <input type="text" id="dataHora" name="dataHora" readonly placeholder="Escolha no calendário"
+          class="flex-1 px-4 py-2 rounded-full border-2 border-neutral-900 bg-neutral-700 text-gray-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-500">
+      </div>
+
+
+      </div>
+      <!-- Calendário será inserido via JavaScript -->
+      </div>
+
+
+      <!-- Calendário será inserido via JavaScript -->
+      </div>
+
+      <!-- Serviço -->
+      <div>
+        <label for="servico" class="block mb-2 font-semibold">Serviço</label>
+        <select id="servico" name="servico" required
+          class="w-full px-4 py-2 rounded bg-neutral-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-amber-500">
+          <option value="">Selecione um serviço</option>
+          <option value="Todo na 0 ou 1">Todo na “0” ou na “1” — R$17,00</option>
+          <option value="Tradicional">Tradicional* — R$20,00</option>
+          <option value="Todo na Tesoura">Todo na Tesoura — R$25,00</option>
+          <option value="Degradê">Degradê* — R$25,00</option>
+          <option value="Degradê Navalhado">Degradê Navalhado — R$28,00</option>
+          <option value="Infantil">Infantil* — R$25,00</option>
+          <option value="Barba">Barba — R$17,00</option>
+          <option value="Sobrancelha">Sobrancelha — R$7,00</option>
+          <option value="Pezzinho">Apenas o pezinho — R$7,00</option>
+          <option value="Listra diferenciada">Listra diferenciada — R$4,00</option>
+          <option value="Listra simples">Listra simples — R$2,00</option>
+        </select>
+      </div>
+
+      <!-- Botão de envio -->
+      <div class="text-center">
+        <button type="submit" class="bg-amber-500 hover:bg-yellow-600 text-black font-bold px-6 py-3 rounded-full">
+          Confirmar Agendamento
+        </button>
+      </div>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+  <script src="assets/js/footer.js"></script>
+
+  <!-- Chamando o JavaScript -->
+  <script src="assets/js/agendamento.js"></script>
+
+</body>
+
+</html>

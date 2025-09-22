@@ -1,0 +1,10 @@
+{
+  "name": "d_barber_shop",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tailwindcss -i ./input.css -o ./style.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
