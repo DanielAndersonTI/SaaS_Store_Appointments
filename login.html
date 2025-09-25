@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Painel do Administrador | D'Barber Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-neutral-900 text-gray-200 font-sans min-h-screen">
+
+    <main class="max-w-md mx-auto mt-20 p-6 bg-neutral-800 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-6 text-center">Login do Administrador</h2>
+
+        <!-- Mensagem de erro -->
+        <div id="erro" class="text-center text-red-500 mb-4"></div>
+
+        <form action="login.php" method="POST" class="space-y-6">
+            <div>
+                <label for="email" class="block mb-2 font-semibold">E-mail</label>
+                <input type="email" name="email" id="email" required
+                    class="w-full px-4 py-2 rounded bg-neutral-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-amber-500">
+            </div>
+
+            <div>
+                <label for="senha" class="block mb-2 font-semibold">Senha</label>
+                <input type="password" name="senha" id="senha" required
+                    class="w-full px-4 py-2 rounded bg-neutral-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-amber-500">
+            </div>
+
+            <div class="text-center">
+                <a href="cadastro_admin.html" class="inline-block mt-4 text-sm text-amber-400 hover:underline">
+                    Criar conta de administrador
+                </a>
+            </div>
+
+
+            <div class="text-center">
+                <button type="submit"
+                    class="bg-amber-500 hover:bg-yellow-600 text-black font-bold px-6 py-3 rounded-full">
+                    Entrar
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        // Exibe mensagem de erro com base na URL
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("erro") === "usuario") {
+            document.getElementById("erro").textContent = "Usuário não encontrado.";
+        } else if (params.get("erro") === "senha") {
+            document.getElementById("erro").textContent = "Senha incorreta.";
+        }
+    </script>
+</body>
+
+</html>

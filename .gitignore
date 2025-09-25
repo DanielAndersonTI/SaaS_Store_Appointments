@@ -1,0 +1,32 @@
+# Arquivo .gitignore para D'Barber Shop
+
+# 🔒 ARQUIVOS SENSÍVEIS (NUNCA ENVIAR)
+.env
+config.local.php
+*.key
+*.pem
+
+# 📊 LOGS E TEMPORÁRIOS
+*.log
+logs/
+tmp/
+temp/
+
+# 💻 ARQUIVOS DO SISTEMA
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 🛠️ ARQUIVOS DE IDE/EDITOR
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 🗄️ BACKUPS DE BANCO DE DADOS
+*.sql
+*.bak
+backup/
+
+# 🖼️ IMAGENS TEMPORÁRIAS
+uploads/temp/

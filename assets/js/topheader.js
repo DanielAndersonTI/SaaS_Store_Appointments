@@ -20,6 +20,11 @@ document.getElementById("topheader").innerHTML = `
                 <span>Localização</span>
                 <img src="assets/icons/map.svg" alt="Ícone de mapa" class="w-5 h-5 ml-2">
             </a>
+            <a href="login.html"
+        class="flex items-center bg-gray-700 hover:bg-yellow-600 text-white px-4 py-2 rounded-full whitespace-nowrap">
+        <span>Login</span>
+        <img src="assets/icons/user.png" alt="Ícone de usuário" class="w-5 h-5 ml-2">
+      </a>
         </div>
     </div>
 `;

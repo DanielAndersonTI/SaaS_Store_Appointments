@@ -19,7 +19,7 @@
   <!-- Formulário de Agendamento -->
   <main class="max-w-xl mx-auto mt-10 p-6 bg-neutral-800 rounded-lg shadow-md">
     <h2 class="text-2xl font-bold mb-6 text-center">Agende seu horário</h2>
-    <form action="agendar.php" method="POST" class="space-y-6">
+    <form action="database/agendar.php" method="POST" class="space-y-6">
 
       <!-- Nome -->
       <div>
@@ -40,17 +40,19 @@
         <div class="flex-shrink-0">
           <img src="assets/icons/calendar.png" alt="Calendário" class="w-10 h-10 cursor-pointer">
         </div>
-        <input type="text" id="dataHora" name="dataHora" readonly placeholder="Escolha no calendário"
+        <input type="text" id="dataHora" name="dataHora" 
           class="flex-1 px-4 py-2 rounded-full border-2 border-neutral-900 bg-neutral-700 text-gray-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-500">
       </div>
 
-
-      </div>
-      <!-- Calendário será inserido via JavaScript -->
-      </div>
-
-
-      <!-- Calendário será inserido via JavaScript -->
+      <!-- Funcionário -->
+      <div>
+        <label for="funcionario" class="block mb-2 font-semibold">Funcionário</label>
+        <select id="funcionario" name="profissional_id" required
+          class="w-full px-4 py-2 rounded bg-neutral-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-amber-500">
+          <option value="">Selecione o funcionário</option>
+          <option value="1">Daniel Anderson</option>
+          <option value="2">Leandro Almeida</option>
+        </select>
       </div>
 
       <!-- Serviço -->
@@ -59,17 +61,17 @@
         <select id="servico" name="servico" required
           class="w-full px-4 py-2 rounded bg-neutral-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-amber-500">
           <option value="">Selecione um serviço</option>
-          <option value="Todo na 0 ou 1">Todo na “0” ou na “1” — R$17,00</option>
-          <option value="Tradicional">Tradicional* — R$20,00</option>
-          <option value="Todo na Tesoura">Todo na Tesoura — R$25,00</option>
-          <option value="Degradê">Degradê* — R$25,00</option>
-          <option value="Degradê Navalhado">Degradê Navalhado — R$28,00</option>
-          <option value="Infantil">Infantil* — R$25,00</option>
-          <option value="Barba">Barba — R$17,00</option>
-          <option value="Sobrancelha">Sobrancelha — R$7,00</option>
-          <option value="Pezzinho">Apenas o pezinho — R$7,00</option>
-          <option value="Listra diferenciada">Listra diferenciada — R$4,00</option>
-          <option value="Listra simples">Listra simples — R$2,00</option>
+          <option value="1">Todo na 0 ou 1 — R$17,00</option>
+          <option value="2">Tradicional — R$20,00</option>
+          <option value="3">Todo na Tesoura — R$25,00</option>
+          <option value="4">Degradê — R$25,00</option>
+          <option value="5">Degradê Navalhado — R$28,00</option>
+          <option value="6">Infantil — R$25,00</option>
+          <option value="7">Barba — R$17,00</option>
+          <option value="8">Sobrancelha — R$7,00</option>
+          <option value="9">Pezzinho — R$7,00</option>
+          <option value="10">Listra diferenciada — R$4,00</option>
+          <option value="11">Listra simples — R$2,00</option>
         </select>
       </div>
 
@@ -90,5 +92,4 @@
   <script src="assets/js/agendamento.js"></script>
 
 </body>
-
 </html>

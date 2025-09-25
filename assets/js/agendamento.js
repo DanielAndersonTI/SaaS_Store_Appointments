@@ -63,19 +63,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 const ocupado = horariosOcupados[dataStr]?.includes(horario);
                 const botao = document.createElement("button");
                 botao.textContent = horario;
-                botao.className = `px-4 py-2 rounded text-sm w-full sm:w-auto border ${
-                    ocupado
+                botao.className = `px-4 py-2 rounded text-sm w-full sm:w-auto border ${ocupado
                         ? "bg-neutral-700 text-gray-400 cursor-not-allowed border-transparent"
                         : "bg-amber-500 hover:bg-yellow-600 text-black border-yellow-600"
-                }`;
+                    }`;
 
                 botao.disabled = ocupado;
 
                 if (!ocupado) {
                     botao.addEventListener("click", () => {
-                        const diaFormatado = `${String(dia.getDate()).padStart(2, "0")}/${String(dia.getMonth() + 1).padStart(2, "0")}/${dia.getFullYear()}`;
-                        const horarioFormatado = horario.replace(":", "h");
-                        dataHoraInput.value = `${diaFormatado}, às ${horarioFormatado}`;
+                        const dataHoraFormatada = `${dataStr} ${horario}:00`;
+                        dataHoraInput.value = dataHoraFormatada;
+
 
                         calendario.remove();
                     });
@@ -126,9 +125,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (valor.length > 11) valor = valor.slice(0, 11); // limita 11 dígitos
 
         if (valor.length > 6) {
-            e.target.value = `(${valor.slice(0,2)}) ${valor.slice(2,7)}-${valor.slice(7)}`;
+            e.target.value = `(${valor.slice(0, 2)}) ${valor.slice(2, 7)}-${valor.slice(7)}`;
         } else if (valor.length > 2) {
-            e.target.value = `(${valor.slice(0,2)}) ${valor.slice(2)}`;
+            e.target.value = `(${valor.slice(0, 2)}) ${valor.slice(2)}`;
         } else {
             e.target.value = valor;
         }
